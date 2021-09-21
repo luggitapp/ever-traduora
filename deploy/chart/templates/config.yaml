@@ -1,0 +1,14 @@
+# https://docs.traduora.com/docs/configuration
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Release.Name }}-config
+  namespace: {{ .Release.Namespace }}
+  labels:
+    app: {{ .Release.Name }}
+    chart: "{{ .Chart.Name }}-{{ .Chart.Version | replace "+" "_" }}"
+    release: "{{ .Release.Name }}"
+    heritage: "{{ .Release.Service }}"
+data:
+  TR_VIRTUAL_HOST: {{ .Values.ingress.host }}
+{{ toYaml .Values.config | indent 2 }}

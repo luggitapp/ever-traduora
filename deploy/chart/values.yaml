@@ -1,0 +1,51 @@
+image: traduora/traduora:0.15.0
+
+
+affinity: {}
+
+resources: {}
+
+# livenessProbe:
+#   initialDelaySeconds: 10
+#   httpGet:
+#     path: /health
+#     port: http
+# readinessProbe:
+#   initialDelaySeconds: 10
+#   httpGet:
+#     path: /health
+#     port: http
+
+
+mysql:
+  external: false
+
+  image: mysql:5.7
+  resources: {}
+
+
+config:
+  NODE_ENV: "production"
+  TR_PORT: "8080"
+  TR_AUTH_TOKEN_EXPIRE: "8600"
+  TR_DB_DATABASE: "traduora"
+  TR_DB_HOST: "traduora-svc.{{ .Release.Namespace }}.svc.cluster.local"
+  TR_DB_PORT: "3306"
+  TR_DB_USER: "root"
+  TR_MAIL_DEBUG: "false"
+  # TR_MAIL_HOST: "email-smtp.eu-central-1.amazonaws.com"
+  # TR_MAIL_PORT: "587"
+  # TR_MAIL_SENDER: "it@luggit.app"
+  # TR_MAIL_USER: ""
+  # TR_MAIL_SECURE: "true"
+  # TR_AUTH_GOOGLE_ENABLED: "true"
+  TR_AUTH_GOOGLE_REDIRECT_URL: "https://{{ .Values.endpoint }}/auth/callback"
+  TR_SIGNUPS_ENABLED: "false"
+
+# 
+secrets:
+
+
+ingress:
+  enabled: true
+  host: i8n.example.com

@@ -1,0 +1,8 @@
+apiVersion: v1
+appVersion: "0.15.0"
+description: Traduora translations service
+name: traduora
+version: 0.15.0
+sources:
+  - https://github.com/traduora/traduora
+home: https://traduora.com/
