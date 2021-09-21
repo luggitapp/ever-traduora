@@ -1,4 +1,4 @@
-{{- if eq .Values.mysql.external "false" }}
+{{- if eq .Values.mysql.external false }}
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:

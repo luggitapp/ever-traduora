@@ -4,18 +4,16 @@ metadata:
   name: {{ .Release.Name }}-ingress
   namespace: {{ .Release.Namespace }}
   labels:
-    app: traduora
+    app: {{ .Release.Name }}
     chart: "{{ .Chart.Name }}-{{ .Chart.Version | replace "+" "_" }}"
     release: "{{ .Release.Name }}"
     heritage: "{{ .Release.Service }}"
-    app: traduora
-  # IMPORTANT:
-  # It is strongly recommended that you only serve traduora over TLS
-  # Configure according to your cloud environment
-  #
-  # annotations:
-  #   kubernetes.io/ingress.global-static-ip-name: "web-static-ip"  # Replace with your GCP static ip
-  #   ingress.gcp.kubernetes.io/pre-shared-cert: "traduora-tls"  # Replace with your GCP managed TLS certificate
+{{- if .Values.ingress.annotations }}
+  annotations:
+    {{- range $key, $value := .Values.ingress.annotations }}
+      {{ $key }}: {{ $value | quote }}
+    {{- end }}
+{{- end }}
 spec:
   rules:
   - host: {{ .Values.ingress.host }}
@@ -23,5 +21,9 @@ spec:
       paths:
         - path: /*
           backend:
-            serviceName: traduora
+            serviceName: {{ .Release.Name }}-svc
             servicePort: http
+{{- if .Values.ingress.tls }}
+  tls:
+{{ toYaml .Values.ingress.tls | indent 4 }}
+{{- end -}}

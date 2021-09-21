@@ -29,19 +29,16 @@ spec:
             - name: http
               containerPort: 8080
               protocol: TCP
+{{- if .Values.affinity }}
           resources:
-            limits:
-              cpu: 500m
-              memory: 256Mi
-            requests:
-              cpu: 50m
-              memory: 64Mi
+{{ toYaml .Values.resources | indent 12 }}
+{{- end }}
           envFrom:
            - configMapRef:
                name: {{ .Release.Name }}-config
            - secretRef:
                name: {{ .Release.Name }}-secrets
-{{- if eq .Values.mysql.external "false" }}
+{{- if eq .Values.mysql.external false }}
         - name: mysql
           image: {{ .Values.mysql.image }}
           args:
@@ -50,13 +47,10 @@ spec:
             - name: mysql
               containerPort: 3306
               protocol: TCP
+{{- if .Values.affinity }}
           resources:
-            limits:
-              cpu: 500m
-              memory: 256Mi
-            requests:
-              cpu: 50m
-              memory: 64Mi
+{{ toYaml .Values.mysql.resources | indent 12 }}
+{{- end }}
           envFrom:
             - secretRef:
                 name: {{ .Release.Name }}-secrets
@@ -67,5 +61,5 @@ spec:
       - name: mysql-storage
         persistentVolumeClaim:
           claimName: {{ .Release.Name }}-claim
-{{-- end }}
+{{- end }}
 
