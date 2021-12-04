@@ -6,7 +6,7 @@
 [![Docker Pulls](https://img.shields.io/docker/pulls/traduora/traduora)](https://hub.docker.com/r/traduora/traduora)
 [![Get help on Codementor](https://cdn.codementor.io/badges/get_help_github.svg)](https://www.codementor.io/evereq?utm_source=github&utm_medium=button&utm_term=evereq&utm_campaign=github)
 
-Ever® Traduora - **Open-Source Translation Management Platform** for teams. 
+Ever® Traduora - **Open Translation Management Platform** for teams. 
 
 Once you setup your project you can import and export your translations to various formats, work together with your team, instantly deliver translation updates over the air, and *soon* automatically translate your project via third-party integrations.
 
@@ -18,6 +18,9 @@ We are going to also use Traduora from our other open-source platforms (currentl
 
 ## Features
 
+For quick features review, please see our official docs [screenshots](https://docs.traduora.co/docs/screenshots) page.
+
+Short list of platform features:
 - 5-minute setup with Docker, Kubernetes or from source
 - Find what you are looking for with instant search
 - Invite your team, everyone can work together on the same project
@@ -25,29 +28,23 @@ We are going to also use Traduora from our other open-source platforms (currentl
 - Import and export to your favorite formats: JSON flat and nested, CSV, YAML flat and nested, Java Properties, XLIFF 1.2, Gettext (po), Strings, Android Resources (xml).
 - community contributed CLI available at https://github.com/iilei/traduora-cli (not official CLI)
 
-For more information check out [Traduora.com](https://traduora.com), or our docs at [docs.traduora.com](https://docs.traduora.com)
+For more information check out our official website [traduora.co](https://traduora.co), or our docs at [docs.traduora.co](https://docs.traduora.co).
 
 Any missing feature you'd like to see? File an [issue](https://github.com/ever-co/feature-requests/issues) with the feature request to let us know.
 
 ## Try it out
 
-Traduora can be run just about anywhere, check out our [Quickstart](https://docs.traduora.com/docs/getting-started) for more info.
+Traduora can be run just about anywhere, check out our [Quickstart](https://docs.traduora.co/docs/getting-started) for more info.
 
 Also check out Traduora's [Docker Hub page](https://hub.docker.com/r/everco/ever-traduora) for pre-built images.
 
-## Adopters
-
-- Your company/project.
-
-Submit a pull-request to include your company/project into the list.
-
 ### Configuration and Deployment
 
-Please check out the [configuration](https://docs.traduora.com/docs/configuration) and [deployment](https://docs.traduora.com/docs/deployment) documents for more information on deploying Traduora.
+Please check out the [configuration](https://docs.traduora.co/docs/configuration) and [deployment](https://docs.traduora.co/docs/deployment) documents for more information on deploying Traduora.
 
 ## Frequently Asked Questions
 
-Some questions come up over and over again. Be sure to check out our [FAQ](https://docs.traduora.com/docs/faq) first!
+Some questions come up over and over again. Be sure to check out our [FAQ](https://docs.traduora.co/docs/faq) first!
 
 ## Contact Us
 
@@ -74,7 +71,7 @@ We think it's great that you'd like to contribute to Traduora.
 
 -   Please give us :star: on Github, it **helps**!
 -   You are more than welcome to submit feature requests in the [separate repo](https://github.com/ever-co/feature-requests/issues).
--   Pull requests are always welcome! Please base pull requests against the _develop_ branch and follow the [contribution guidelines](https://docs.traduora.com/docs/contributing). 
+-   Pull requests are always welcome! Please base pull requests against the _develop_ branch and follow the [contribution guidelines](https://docs.traduora.co/docs/contributing). 
  
 ## Contributors
 
@@ -86,7 +83,7 @@ Of course we'd like Traduora to be available in as many languages as possible. W
 
 ## Changelog
 
-You can check our [changelog](https://docs.traduora.com/docs/changelog) for information about releases.
+You can check our [changelog](https://docs.traduora.co/docs/changelog) for information about releases.
 
 ## License
 
@@ -94,7 +91,7 @@ See [LICENSE](https://github.com/ever-co/ever-traduora/blob/master/LICENSE).
 
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fever-co%2Fever-traduora.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fever-co%2Fever-traduora?ref=badge_large)
 
-Traduora was created by https://github.com/anthonynsimon (https://anthonynsimon.com) and [contributors](https://github.com/ever-co/ever-traduora/graphs/contributors). In April 2021 it was moved to Ever company for future development.
+Traduora was created by https://github.com/anthonynsimon (https://anthonynsimon.com) and [contributors](https://github.com/ever-co/ever-traduora/graphs/contributors). In April 2021 it was moved to [Ever](https://ever.co) company for future development.
 
 ## Trademarks
 
